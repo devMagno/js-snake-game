@@ -7,6 +7,10 @@ snake[0] = {
   y: 8 * box
 }
 let direction = "up";
+let apple = {
+  x: Math.floor(Math.random() * 15 + 1) * box,
+  y: Math.floor(Math.random() * 15 + 1) * box
+}
 
 function createBackground() {
   context.fillStyle = "lightgreen"
@@ -18,7 +22,12 @@ function createSnake() {
     context.fillStyle = "#43a047"
     context.fillRect(snake[i].x, snake[i].y, box, box)
   }
-} 
+}
+
+function createApple() {
+  context.fillStyle = "#e53935"
+  context.fillRect(apple.x, apple.y, box, box)
+}
 
 document.addEventListener('keydown', update);
 function update(event) {
@@ -36,6 +45,7 @@ function startGame() {
 
   createBackground()
   createSnake()
+  createApple()
 
   let snakeX = snake[0].x
   let snakeY = snake[0].y
