@@ -1,5 +1,8 @@
 let scoreText = document.getElementById('score')
-score = 0
+let score = 0
+let highscore = localStorage.getItem("highscore")
+let highscoreText = document.getElementById('highscore')
+highscoreText.innerText = highscore
 let canvas = document.querySelector("#game")
 let context = canvas.getContext("2d")
 let box = 32
@@ -72,6 +75,11 @@ function startGame() {
     apple.y = Math.floor(Math.random() * 15 + 1) * box
     score ++
     scoreText.innerText = score
+    if(score > highscore){
+      highscore = score
+    }
+    localStorage.setItem("highscore", highscore)
+    highscoreText.innerText = highscore
   }
 
   let snakeHead = {
