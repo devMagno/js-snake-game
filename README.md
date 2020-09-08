@@ -4,5 +4,5 @@
  **Você pode acessar o projeto clicando [aqui](https://devmagno.github.io/js-snake-game).**   
 ***
 <span style="text-align: center">
-![JavaScript Snake Game](https://media1.giphy.com/media/fq8JHOzq9ZML4DDWfK/giphy.gif "JavaScript Snake Game")
+ <img src="https://media1.giphy.com/media/fq8JHOzq9ZML4DDWfK/giphy.gif" alt="JavaScript Snake Game" title="JavaScript Snake Game">
 </span>
