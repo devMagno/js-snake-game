@@ -1,4 +1,6 @@
-let canvas = document.querySelector("#game");
+let scoreText = document.getElementById('score')
+score = 0
+let canvas = document.querySelector("#game")
 let context = canvas.getContext("2d")
 let box = 32
 let snake = []
@@ -6,7 +8,7 @@ snake[0] = {
   x: 8 * box,
   y: 8 * box
 }
-let direction = "up";
+let direction = "up"
 let apple = {
   x: Math.floor(Math.random() * 15 + 1) * box,
   y: Math.floor(Math.random() * 15 + 1) * box
@@ -29,7 +31,7 @@ function createApple() {
   context.fillRect(apple.x, apple.y, box, box)
 }
 
-document.addEventListener('keydown', update);
+document.addEventListener('keydown', update)
 function update(event) {
   if (event.keyCode == 37 && direction != "right"){direction = "left"}
   if (event.keyCode == 39 && direction != "left"){direction = "right"}
@@ -45,7 +47,7 @@ function startGame() {
 
   for(i = 1; i < snake.length; i++){
     if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
-      clearInterval(game);
+      clearInterval(game)
       alert('GAME OVER! :(')
     }
   }
@@ -68,6 +70,8 @@ function startGame() {
   } else {
     apple.x = Math.floor(Math.random() * 15 + 1) * box
     apple.y = Math.floor(Math.random() * 15 + 1) * box
+    score ++
+    scoreText.innerText = score
   }
 
   let snakeHead = {
@@ -78,4 +82,4 @@ function startGame() {
 
 }
 
-let game = setInterval(startGame, 100);
+let game = setInterval(startGame, 100)
