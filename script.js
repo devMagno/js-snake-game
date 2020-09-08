@@ -54,8 +54,15 @@ function startGame() {
   if(direction == "left"){snakeX -= box}
   if(direction == "up"){snakeY -= box}
   if(direction == "down"){snakeY += box}
-  snake.pop()
   
+  
+  if(snakeX != apple.x || snakeY != apple.y){
+    snake.pop()
+  } else {
+    apple.x = Math.floor(Math.random() * 15 + 1) * box
+    apple.y = Math.floor(Math.random() * 15 + 1) * box
+  }
+
   let snakeHead = {
     x: snakeX,
     y: snakeY
