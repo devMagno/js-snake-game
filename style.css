@@ -8,6 +8,9 @@ body {
   align-items: center;
   flex-direction: column;
   color: #43a047;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
   background: rgb(31, 33, 32);
+}
+h1 {
+  margin-bottom: 0px;
 }
