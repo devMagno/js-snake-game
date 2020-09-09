@@ -74,6 +74,13 @@ function startGame() {
   } else {
     apple.x = Math.floor(Math.random() * 15 + 1) * box
     apple.y = Math.floor(Math.random() * 15 + 1) * box
+    for(i = 0; i < snake.length; i++){
+      if(apple.x == snake[i].x && apple.y == snake[i].y){
+        apple.x = Math.floor(Math.random() * 15 + 1) * box
+        apple.y = Math.floor(Math.random() * 15 + 1) * box
+        i = 0
+      }
+    }
     score ++
     scoreText.innerText = score
     if(score > highscore){
