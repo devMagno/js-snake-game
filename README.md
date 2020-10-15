@@ -19,6 +19,7 @@ O famoso **Jogo da Cobrinha** (ou Snake Game) com JavaScript. O projeto foi dese
 <p align="center">
 	<img src="https://media1.giphy.com/media/fq8JHOzq9ZML4DDWfK/giphy.gif" alt="JavaScript Snake Game" title="JavaScript Snake Game">
 </p>
+
 Você pode acessar o projeto clicando [aqui](http://devmagno.github.io/js-snake-game).
 
 
